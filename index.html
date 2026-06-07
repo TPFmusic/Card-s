@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карты Выгодно • Тинькофф, Альфа, Ozon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
+        
+        :root { --primary: 59 130 246; }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; }
+
+        .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
+        .gradient-text { background: linear-gradient(to right, #60a5fa, #a5b4fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        .modal { animation: modalPop 0.3s ease-out; }
+        @keyframes modalPop { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        .star { cursor: pointer; transition: all 0.2s; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+
+    <!-- HEADER -->
+    <header class="border-b border-white/10 backdrop-blur-lg bg-zinc-950/80 fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-blue-500 rounded-2xl flex items-center justify-center text-2xl font-bold">💳</div>
+                <span class="text-2xl font-semibold heading-font tracking-tight">Карты Выгодно</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#ways" class="hover:text-blue-400 transition-colors">Способы</a>
+                <a href="#benefits" class="hover:text-blue-400 transition-colors">Преимущества</a>
+                <a href="#reviews" class="hover:text-blue-400 transition-colors">Отзывы</a>
+                <a href="#faq" class="hover:text-blue-400 transition-colors">Вопросы</a>
+                <a href="#feedback" class="hover:text-blue-400 transition-colors">Обратная связь</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button onclick="showAuthModal()" class="px-6 py-2.5 rounded-2xl border border-white/30 hover:bg-white/10 transition-all text-sm font-medium">
+                    Войти / Регистрация
+                </button>
+                <button onclick="showReviewModal()" class="bg-emerald-600 hover:bg-emerald-500 px-6 py-2.5 rounded-2xl font-semibold flex items-center gap-2">
+                    <i class="fas fa-star"></i> Написать отзыв
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="pt-12">
+                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-3xl text-sm mb-6">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    Актуально на июнь 2026
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl font-semibold heading-font leading-tight tracking-tighter mb-6">
+                    Оформи карту<br>от Владислава и получи <span class="gradient-text">до 5.000 ₽</span>
+                </h1>
+                
+                <p class="text-xl text-zinc-300 max-w-lg mb-10">
+                    Три самых выгодных предложения через мою реферальную программу. 
+                    Быстро, просто и с максимальными бонусами.
+                </p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#ways" class="bg-white text-zinc-900 px-8 py-4 rounded-3xl font-semibold text-lg flex items-center gap-3 hover:scale-105 transition-transform">
+                        Выбрать карту
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <button onclick="copyRefLink()" class="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-3xl font-medium transition-colors">
+                        Скопировать мою реф. ссылку
+                    </button>
+                </div>
+                
+                <div class="mt-12 flex items-center gap-8 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check text-emerald-400"></i>
+                        <span>Моментальный выпуск</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check text-emerald-400"></i>
+                        <span>Кэшбэк до 30%</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative hidden md:block">
+                <div class="absolute -inset-10 bg-blue-500/10 blur-3xl rounded-[4rem]"></div>
+                <img src="https://i.pinimg.com/736x/7d/8d/22/7d8d22d66d37dceba07f178704766c82.jpg" alt="Банковские карты" class="rounded-3xl shadow-2xl relative z-10 border border-white/20">
+                <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-white/20 rounded-3xl p-6 shadow-xl">
+                    <div class="flex items-center gap-4">
+                        <div class="text-4xl">🎉</div>
+                        <div>
+                            <p class="font-semibold">Ваш бонус</p>
+                            <p class="text-emerald-400 text-2xl font-semibold">до 5000 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3 WAYS -->
+    <section id="ways" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-semibold heading-font mb-4">3 способа оформить карту</h2>
+                <p class="text-zinc-400 text-xl max-w-md mx-auto">Выберите банк и нужный продукт</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Tinkoff -->
+                <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group">
+                    <div class="h-14 w-14 bg-orange-500 rounded-2xl flex items-center justify-center text-4xl mb-8">🍊</div>
+                    <h3 class="text-3xl font-semibold mb-2 heading-font">Тинькофф</h3>
+                    <p class="text-emerald-400 font-medium mb-6">До 5000 ₽ за оформление</p>
+                    <ul class="space-y-4 mb-10 text-zinc-300">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Кредитная карта с кэшбэком до 30%</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бесплатное обслуживание навсегда</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Моментальное решение онлайн</span></li>
+                    </ul>
+                    <button onclick="openModal('tinkoffModal')" class="block w-full bg-gradient-to-r from-orange-400 to-amber-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
+                        Оформить Тинькофф →
+                    </button>
+                </div>
+
+                <!-- Alfa -->
+                <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group relative">
+                    <div class="absolute -top-3 -right-3 bg-red-500 text-xs font-bold px-4 py-1 rounded-3xl">ХИТ</div>
+                    <div class="h-14 w-14 bg-red-600 rounded-2xl flex items-center justify-center text-4xl mb-8">🔴</div>
+                    <h3 class="text-3xl font-semibold mb-2 heading-font">Альфа-Банк</h3>
+                    <p class="text-emerald-400 font-medium mb-6">До 4000 ₽ + приветственный кэшбэк</p>
+                    <ul class="space-y-4 mb-10 text-zinc-300">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Альфа-Карта с кэшбэком 10% на всё</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>До 5000 ₽ в месяц кэшбэком</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бесплатная доставка курьером</span></li>
+                    </ul>
+                    <button onclick="openModal('alfaModal')" class="block w-full bg-gradient-to-r from-red-500 to-rose-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
+                        Оформить Альфу →
+                    </button>
+                </div>
+
+                <!-- Ozon -->
+                <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group">
+                    <div class="h-14 w-14 bg-violet-600 rounded-2xl flex items-center justify-center text-4xl mb-8">🛍️</div>
+                    <h3 class="text-3xl font-semibold mb-2 heading-font">Ozon Банк</h3>
+                    <p class="text-emerald-400 font-medium mb-6">До 3000 ₽ + баллы OZON</p>
+                    <ul class="space-y-4 mb-10 text-zinc-300">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Карта с кэшбэком в Ozon</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Выгодные рассрочки</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бонусы на маркетплейсе</span></li>
+                    </ul>
+                    <button onclick="openModal('ozonModal')" class="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
+                        Оформить Ozon →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section id="benefits" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="text-5xl font-semibold heading-font leading-tight">Почему через мою реферальную программу выгоднее?</h2>
+                    <div class="mt-8 space-y-8">
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-blue-400">01</div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Максимальные бонусы</h4>
+                                <p class="text-zinc-400">Я знаю все актуальные акции и помогаю получить самый высокий бонус.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-blue-400">02</div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Личная поддержка</h4>
+                                <p class="text-zinc-400">Помогу с оформлением и отвечу на все вопросы.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-5xl text-blue-400">03</div>
+                            <div>
+                                <h4 class="text-xl font-semibold mb-2">Быстро и безопасно</h4>
+                                <p class="text-zinc-400">Официальные ссылки банков. Никаких рисков.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-7">
+                    <div class="bg-zinc-900 rounded-3xl p-10">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="space-y-8">
+                                <div><div class="text-emerald-400 text-sm font-medium">ТИНЬКОФФ</div><div class="text-5xl font-semibold mt-1">5000 ₽</div></div>
+                                <div><div class="text-emerald-400 text-sm font-medium">АЛЬФА</div><div class="text-5xl font-semibold mt-1">4000 ₽</div></div>
+                            </div>
+                            <div class="bg-zinc-800 rounded-3xl p-8 flex flex-col justify-center">
+                                <p class="text-2xl font-medium leading-tight">«Оформил карту Тинькофф за 7 минут. Бонус пришёл на следующий день!»</p>
+                                <p class="text-zinc-400 mt-6">— Алексей, Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-semibold heading-font mb-4">Отзывы клиентов</h2>
+                <p class="text-zinc-400 text-xl">Реальные отзывы людей, которые оформили карты</p>
+            </div>
+            <div id="reviewsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center mb-12">Часто задаваемые вопросы</h2>
+            <div class="space-y-6">
+                <details class="group bg-zinc-800/70 rounded-3xl p-8">
+                    <summary class="flex justify-between items-center cursor-pointer text-xl font-medium">
+                        <span>Сколько времени занимает оформление?</span>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-6 text-zinc-400">От 5 до 15 минут онлайн. Курьер привозит карту в течение 1–3 дней.</p>
+                </details>
+                <details class="group bg-zinc-800/70 rounded-3xl p-8">
+                    <summary class="flex justify-between items-center cursor-pointer text-xl font-medium">
+                        <span>Нужно ли платить за выпуск карты?</span>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-6 text-zinc-400">Нет. Все карты бесплатны в выпуске и обслуживании по акциям.</p>
+                </details>
+                <details class="group bg-zinc-800/70 rounded-3xl p-8">
+                    <summary class="flex justify-between items-center cursor-pointer text-xl font-medium">
+                        <span>Можно ли оформить несколько карт?</span>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-6 text-zinc-400">Да, можно оформить все три. Бонусы суммируются.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ОБРАТНАЯ СВЯЗЬ -->
+    <section id="feedback" class="py-24 bg-black border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-zinc-900 rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-shrink-0">
+                    <img src="https://sun1-18.userapi.com/s/v1/ig2/geloJHmOUDps-gpcYd0aMBH_ZIaGAYcKY1PlD49u1khupoItP-FYP_Hl3r7HXgXuclndOR_uSHU8huUqgTbKoNOR.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&cs=1254x0" alt="Владислав" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-3xl border-4 border-blue-500/30 shadow-2xl">
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                    <h2 class="text-4xl font-semibold heading-font mb-4">Обратная связь</h2>
+                    <p class="text-xl text-zinc-400 mb-8">Есть вопросы по оформлению карт или бонусам? Пишите мне — отвечу максимально быстро.</p>
+                    <a href="https://vk.com/vladislav_manager_tao" target="_blank" class="inline-flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 transition-colors px-8 py-5 rounded-3xl text-lg font-medium group">
+                        <i class="fab fa-vk text-3xl text-blue-400"></i>
+                        <div>
+                            <div class="font-semibold">Написать в VK</div>
+                            <div class="text-sm text-zinc-500">Владислав • Карты Выгодно</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-24 bg-gradient-to-b from-zinc-900 to-black">
+        <div class="max-w-2xl mx-auto text-center px-6">
+            <h2 class="text-5xl font-semibold heading-font mb-6">Готовы получить бонус?</h2>
+            <p class="text-xl text-zinc-400 mb-10">Выберите карту выше и оформите её по моей реферальной ссылке</p>
+            <a href="#ways" class="bg-blue-600 hover:bg-blue-500 transition-colors px-10 py-6 rounded-3xl text-xl font-semibold">Перейти к выбору карт</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500 text-sm">
+            <p>Этот сайт создан для удобства. Все предложения — официальные акции банков.</p>
+            <p class="mt-2">© 2026 Карты Выгодно • Не является финансовой рекомендацией</p>
+        </div>
+    </footer>
+
+    <!-- ==================== МОДАЛЫ ==================== -->
+    <!-- Tinkoff Modal -->
+    <div id="tinkoffModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Какой продукт Тинькофф?</h3>
+            <div class="space-y-3">
+                <a href="https://tbank.ru/baf/ATSApBPtQQf" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Дебетовая карта</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://tbank.ru/baf/9lm0GVe29S9" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Дебетовая исламская карта</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://tbank.ru/baf/9bcPP8CMYDS" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Кредитная карта</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://tbank.ru/baf/9yNpiOaWm3I" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Счёт для бизнеса</span><i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <button onclick="closeModal('tinkoffModal')" class="mt-6 w-full py-3 text-zinc-400 hover:text-white transition-colors">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Alfa Modal -->
+    <div id="alfaModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Какой продукт Альфа-Банка?</h3>
+            <div class="space-y-3">
+                <a href="https://alfa.me/jtyAt_" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Альфа-Карта с кэшбэком</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://alfa.me/VKCZRS" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Детская карта с кэшбэком</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://alfa.me/QsJckI" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Кредитная карта</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://alfa.me/9Uwv9t" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Открытие счёта</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://alfa.me/tADfgn" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Регистрация бизнеса</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://alfa.me/N-ydiM" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Пенсия с Альфа-Картой</span><i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <button onclick="closeModal('alfaModal')" class="mt-6 w-full py-3 text-zinc-400 hover:text-white transition-colors">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Ozon Modal -->
+    <div id="ozonModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
+        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Какой продукт Ozon оформить?</h3>
+            <div class="space-y-3">
+                <a href="https://ozon.ru/fintech/promo/ref/S0A2RLALT" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Карта Ozon Банка</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://ozon.ru/fintech/promo/ref/GEHJ-6_QU" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Кредитная карта</span><i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://ozon.ru/fintech/promo/ref/QKC_UXPWW" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
+                    <span>Регистрация бизнеса</span><i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <button onclick="closeModal('ozonModal')" class="mt-6 w-full py-3 text-zinc-400 hover:text-white transition-colors">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[200]">
+        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
+            <h2 id="modalTitle" class="text-3xl font-semibold mb-6 text-center">Регистрация</h2>
+            <div class="space-y-4">
+                <input id="phone" type="tel" placeholder="+7 (___) ___-__-__" class="w-full bg-zinc-800 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500">
+                <input id="name" type="text" placeholder="Ваше имя (необязательно)" class="w-full bg-zinc-800 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500">
+                <input id="password" type="password" placeholder="Пароль" class="w-full bg-zinc-800 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500">
+            </div>
+            <button onclick="handleAuth()" id="authBtn" class="mt-6 w-full bg-blue-600 hover:bg-blue-500 py-4 rounded-2xl font-semibold text-lg">Зарегистрироваться</button>
+            <p class="text-center mt-4 text-zinc-400">Уже есть аккаунт? <span onclick="toggleAuthMode()" class="text-blue-400 cursor-pointer hover:underline">Войти</span></p>
+            <button onclick="closeAuthModal()" class="mt-4 w-full text-zinc-400 hover:text-white">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[200]">
+        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-semibold mb-6 text-center">Напишите отзыв</h3>
+            <div class="flex gap-2 mb-6 justify-center" id="stars"></div>
+            <textarea id="reviewText" rows="5" class="w-full bg-zinc-800 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-blue-500" placeholder="Что вам понравилось?"></textarea>
+            <button onclick="submitReview()" class="mt-6 w-full bg-emerald-600 hover:bg-emerald-500 py-4 rounded-2xl font-semibold">Опубликовать отзыв</button>
+            <button onclick="closeReviewModal()" class="mt-3 w-full text-zinc-400">Отмена</button>
+        </div>
+    </div>
+
+    <script>
+        let isLoginMode = false;
+        let currentRating = 5;
+
+        // === Авторизация ===
+        function showAuthModal() {
+            document.getElementById('authModal').classList.remove('hidden');
+            document.getElementById('authModal').classList.add('flex');
+        }
+        function closeAuthModal() {
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('authModal').classList.remove('flex');
+        }
+        function toggleAuthMode() {
+            isLoginMode = !isLoginMode;
+            document.getElementById('modalTitle').textContent = isLoginMode ? 'Вход' : 'Регистрация';
+            document.getElementById('authBtn').textContent = isLoginMode ? 'Войти' : 'Зарегистрироваться';
+        }
+        async function handleAuth() {
+            const phone = document.getElementById('phone').value.trim();
+            const password = document.getElementById('password').value;
+            const name = document.getElementById('name').value;
+
+            const url = isLoginMode ? '/api/login' : '/api/register';
+            const body = isLoginMode ? { phone, password } : { phone, password, name };
+
+            try {
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                const data = await res.json();
+                if (data.success) {
+                    if (isLoginMode) {
+                        localStorage.setItem('token', data.token);
+                        alert('✅ Успешный вход!');
+                        closeAuthModal();
+                    } else {
+                        alert('✅ Регистрация прошла успешно! Теперь войдите.');
+                        toggleAuthMode();
+                    }
+                } else alert(data.error || 'Ошибка');
+            } catch (e) { alert('Ошибка соединения'); }
+        }
+
+        // === Отзывы ===
+        function showReviewModal() {
+            if (!localStorage.getItem('token')) {
+                alert("Войдите, чтобы оставить отзыв");
+                showAuthModal();
+                return;
+            }
+            document.getElementById('reviewModal').classList.remove('hidden');
+            document.getElementById('reviewModal').classList.add('flex');
+            renderStars();
+        }
+        function closeReviewModal() {
+            document.getElementById('reviewModal').classList.add('hidden');
+            document.getElementById('reviewModal').classList.remove('flex');
+        }
+        function renderStars() {
+            const container = document.getElementById('stars');
+            container.innerHTML = '';
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement('span');
+                star.textContent = i <= currentRating ? '★' : '☆';
+                star.className = `text-5xl star ${i <= currentRating ? 'text-yellow-400' : 'text-zinc-600'}`;
+                star.onclick = () => { currentRating = i; renderStars(); };
+                container.appendChild(star);
+            }
+        }
+        async function submitReview() {
+            const text = document.getElementById('reviewText').value.trim();
+            if (!text) return alert("Напишите текст отзыва");
+            const res = await fetch('/api/reviews', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                },
+                body: JSON.stringify({ rating: currentRating, text })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert("Отзыв опубликован!");
+                closeReviewModal();
+                loadReviews();
+            } else alert(data.error);
+        }
+
+        async function loadReviews() {
+            try {
+                const res = await fetch('/api/reviews');
+                const reviews = await res.json();
+                const container = document.getElementById('reviewsContainer');
+                container.innerHTML = '';
+
+                if (reviews.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-span-3 text-center py-20">
+                            <p class="text-7xl mb-4">📭</p>
+                            <p class="text-2xl text-zinc-400">Пока что нет отзывов</p>
+                            <p class="text-zinc-500 mt-3">Будь первым! Нажми кнопку "Написать отзыв"</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                reviews.forEach(r => {
+                    const div = document.createElement('div');
+                    div.className = "bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover";
+                    div.innerHTML = `
+                        <div class="flex mb-3 text-yellow-400">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+                        <p class="text-zinc-300 mb-4">"${r.text}"</p>
+                        <p class="text-sm text-zinc-500">- ${r.name || r.user_name}</p>
+                    `;
+                    container.appendChild(div);
+                });
+            } catch (e) {}
+        }
+
+        // Старые функции
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.getElementById(modalId).classList.add('flex');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function copyRefLink() {
+            const dummyLink = "https://ваша-реф-ссылка.сюда";
+            navigator.clipboard.writeText(dummyLink).then(() => alert("Ссылка скопирована!"));
+        }
+
+        window.onload = loadReviews;
+    </script>
+</body>
+</html>

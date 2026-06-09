@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Карты Выгодно • Тинькофф, Альфа, Ozon</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://sun9-6.userapi.com/s/v1/ig2/INzCMK7o3IRPMmZqVNArV_Z2Zyyz-QbxxZje49s0xWL4riTppYdpJIPM--D5JTrtsJOjVFrLRyyoXsD8oSiidUi0.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&u=kcZgAdV3c0OMoo3Srkmk4Smx4VpbQqgUIXVNjiSXV4M&cs=1254x0" type="image/x-icon">
+    <link rel="shortcut icon" href="https://sun9-6.userapi.com/s/v1/ig2/INzCMK7o3IRPMmZqVNArV_Z2Zyyz-QbxxZje49s0xWL4riTppYdpJIPM--D5JTrtsJOjVFrLRyyoXsD8oSiidUi0.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&u=kcZgAdV3c0OMoo3Srkmk4Smx4VpbQqgUIXVNjiSXV4M&cs=1254x0" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://sun9-6.userapi.com/s/v1/ig2/INzCMK7o3IRPMmZqVNArV_Z2Zyyz-QbxxZje49s0xWL4riTppYdpJIPM--D5JTrtsJOjVFrLRyyoXsD8oSiidUi0.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&u=kcZgAdV3c0OMoo3Srkmk4Smx4VpbQqgUIXVNjiSXV4M&cs=1254x0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap');
@@ -16,353 +19,707 @@
         .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
         .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .card-hover:hover { transform: translateY(-12px) scale(1.03); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
-        .gradient-text { background: linear-gradient(to right, #60a5fa, #a5b4fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-text { background: linear-gradient(to right, #60fa81, #8cfc9e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
         .modal { animation: modalPop 0.3s ease-out; }
         @keyframes modalPop { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         .star { cursor: pointer; transition: all 0.2s; }
     </style>
 </head>
+
 <body class="bg-zinc-950 text-white">
 
-    <!-- HEADER -->
-    <header class="border-b border-white/10 backdrop-blur-lg bg-zinc-950/80 fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-blue-500 rounded-2xl flex items-center justify-center text-2xl font-bold">💳</div>
-                <span class="text-2xl font-semibold heading-font tracking-tight">Карты Выгодно</span>
+<!-- HEADER -->
+<header class="fixed w-full z-50 border-b border-white/10 bg-zinc-950/95 backdrop-blur-2xl">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-5 flex items-center justify-between">
+        
+<!-- Логотип -->
+<div class="flex items-center gap-3 md:gap-4 group flex-shrink-0">
+    <div class="relative">
+        <img src="https://sun9-6.userapi.com/s/v1/ig2/INzCMK7o3IRPMmZqVNArV_Z2Zyyz-QbxxZje49s0xWL4riTppYdpJIPM--D5JTrtsJOjVFrLRyyoXsD8oSiidUi0.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&u=kcZgAdV3c0OMoo3Srkmk4Smx4VpbQqgUIXVNjiSXV4M&cs=1254x0" 
+             alt="Владислав" 
+             class="w-10 h-10 md:w-12 md:h-12 object-cover rounded-3xl shadow-2xl shadow-blue-500/50 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-active:scale-95 border border-white/20">
+        
+        <div class="absolute -top-1 -right-1 w-5 h-5 bg-emerald-400 rounded-2xl flex items-center justify-center ring-2 ring-zinc-950">
+            <span class="text-xs font-bold text-black leading-none">★</span>
+        </div>
+    </div>
+    
+    <div class="hidden sm:block">
+        <span class="text-2xl md:text-3xl font-semibold heading-font tracking-tighter bg-gradient-to-r from-white via-zinc-100 to-zinc-300 bg-clip-text text-transparent">
+            Карты Выгодно
+        </span>
+        <p class="text-xs text-emerald-400 -mt-1 font-medium tracking-wide">от Владислава</p>
+    </div>
+</div>
+
+        <!-- Навигация -->
+        <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium mx-auto">
+            <a href="#ways" class="nav-link group relative py-2 text-zinc-300 hover:text-white transition-colors">
+                Способы
+                <span class="absolute bottom-1.5 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-violet-400 group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="#benefits" class="nav-link group relative py-2 text-zinc-300 hover:text-white transition-colors">
+                Преимущества
+                <span class="absolute bottom-1.5 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-violet-400 group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="#reviews" class="nav-link group relative py-2 text-zinc-300 hover:text-white transition-colors">
+                Отзывы
+                <span class="absolute bottom-1.5 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-violet-400 group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="#faq" class="nav-link group relative py-2 text-zinc-300 hover:text-white transition-colors">
+                Вопросы
+                <span class="absolute bottom-1.5 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-violet-400 group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a href="#feedback" class="nav-link group relative py-2 text-zinc-300 hover:text-white transition-colors">
+                Контакты
+                <span class="absolute bottom-1.5 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-400 to-violet-400 group-hover:w-full transition-all duration-300"></span>
+            </a>
+        </nav>
+
+        <!-- Правая часть -->
+        <div class="flex items-center gap-2 md:gap-3 flex-shrink-0" id="headerRight">
+            
+            <!-- Динамические кнопки -->
+            <div id="headerButtons" class="flex items-center gap-2">
+                <!-- JS заполняет -->
             </div>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#ways" class="hover:text-blue-400 transition-colors">Способы</a>
-                <a href="#benefits" class="hover:text-blue-400 transition-colors">Преимущества</a>
-                <a href="#reviews" class="hover:text-blue-400 transition-colors">Отзывы</a>
-                <a href="#faq" class="hover:text-blue-400 transition-colors">Вопросы</a>
-                <a href="#feedback" class="hover:text-blue-400 transition-colors">Обратная связь</a>
-            </nav>
-            <div class="flex items-center gap-3">
-                <button onclick="showAuthModal()" class="px-6 py-2.5 rounded-2xl border border-white/30 hover:bg-white/10 transition-all text-sm font-medium">
-                    Войти / Регистрация
-                </button>
-                <button onclick="showReviewModal()" class="bg-emerald-600 hover:bg-emerald-500 px-6 py-2.5 rounded-2xl font-semibold flex items-center gap-2">
-                    <i class="fas fa-star"></i> Написать отзыв
-                </button>
+
+            <!-- VK Кнопка-квадратик (чуть больше и справа) -->
+            <a href="https://vk.com/card_reff" 
+               target="_blank"
+               class="hidden lg:flex items-center justify-center w-11 h-11 bg-gradient-to-br from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-violet-500 rounded-2xl transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg shadow-indigo-500/30">
+                <i class="fab fa-vk text-2xl"></i>
+            </a>
+
+            <!-- Мобильное меню -->
+            <button id="mobileMenuBtn" 
+                    class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-300 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+<!-- ХУДАЯ И ДЛИННАЯ НЕОНОВАЯ ПЛАШКА -->
+<div class="absolute top-28 left-1/2 -translate-x-1/2 z-30 px-4 w-full max-w-lg">
+    <div class="neon-update mx-auto inline-flex items-center gap-4 
+                bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 
+                backdrop-blur-2xl border border-orange-400/60 
+                px-8 py-2.5 rounded-3xl text-sm font-semibold 
+                transition-all duration-300 hover:duration-200
+                hover:scale-105 hover:border-orange-400 hover:bg-orange-500/20
+                shadow-2xl hover:shadow-[0_0_25px_-5px_#f59e0b,0_0_50px_-5px_#fb923c]">
+        
+        <!-- Индикатор -->
+        <div class="relative flex h-3 w-3 flex-shrink-0">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-orange-500 ring-2 ring-orange-400/50"></span>
+        </div>
+        
+        <span class="bg-gradient-to-r from-orange-400 via-amber-300 to-yellow-300 bg-clip-text text-transparent tracking-widest text-base">
+            ✨ САЙТ ОБНОВЛЁН
+        </span>
+        
+        <!-- Дата -->
+        <span class="text-xl font-bold text-amber-300 tracking-wider transition-all duration-300 hover:text-amber-200 ml-auto">
+            июнь 2026
+        </span>
+    </div>
+</div>
+    <!-- Фоновое свечение -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-indigo-600/10"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+        <div class="pt-12">
+            <!-- Актуально -->
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-3xl text-sm mb-8">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                Актуально на июнь 2026
+            </div>
+            
+            <!-- Главный заголовок -->
+            <h1 class="text-6xl md:text-7xl font-semibold heading-font leading-tight tracking-tighter mb-6">
+                Оформи карту<br>от Владислава и получи 
+                <span class="inline-block bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300 bg-clip-text text-transparent font-bold drop-shadow-[0_0_25px_rgb(52,211,153)]">
+                    5.000 ₽
+                </span>
+            </h1>
+            
+            <p class="text-xl text-zinc-300 max-w-lg mb-10">
+                Три самых выгодных предложения через мою реферальную программу. 
+                Быстро, просто и с максимальными бонусами.
+            </p>
+            
+            <!-- Кнопки -->
+            <div class="flex flex-wrap gap-4">
+                <a href="#ways" class="bg-white text-zinc-900 px-8 py-4 rounded-3xl font-semibold text-lg flex items-center gap-3 hover:scale-105 transition-all active:scale-95 shadow-xl shadow-white/20">
+                    Выбрать карту
+                    <i class="fas fa-arrow-down"></i>
+                </a>
+                
+                <a href="https://vk.com/card_reff" 
+                   target="_blank"
+                   class="group relative border border-white/20 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 hover:from-blue-600/20 hover:to-indigo-600/20 px-8 py-4 rounded-3xl font-medium transition-all duration-300 flex items-center gap-3 hover:scale-105 hover:border-blue-400/50">
+                    <i class="fab fa-vk text-2xl text-blue-400 group-hover:text-blue-300 transition-colors"></i>
+                    <span>Наше ВК сообщество</span>
+                    <i class="fas fa-arrow-up-right-from-square text-blue-400/70 group-hover:text-blue-300 transition-colors"></i>
+                </a>
+            </div>
+            
+            <!-- Преимущества -->
+            <div class="mt-12 flex items-center gap-8 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check text-emerald-400"></i>
+                    <span>Моментальный выпуск</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check text-emerald-400"></i>
+                    <span>Кэшбэк до 30%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check text-emerald-400"></i>
+                    <span>Бонус на карту</span>
+                </div>
             </div>
         </div>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="pt-12">
-                <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-3xl text-sm mb-6">
-                    <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                    </span>
-                    Актуально на июнь 2026
-                </div>
-                
-                <h1 class="text-6xl md:text-7xl font-semibold heading-font leading-tight tracking-tighter mb-6">
-                    Оформи карту<br>от Владислава и получи <span class="gradient-text">до 5.000 ₽</span>
-                </h1>
-                
-                <p class="text-xl text-zinc-300 max-w-lg mb-10">
-                    Три самых выгодных предложения через мою реферальную программу. 
-                    Быстро, просто и с максимальными бонусами.
-                </p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <a href="#ways" class="bg-white text-zinc-900 px-8 py-4 rounded-3xl font-semibold text-lg flex items-center gap-3 hover:scale-105 transition-transform">
-                        Выбрать карту
-                        <i class="fas fa-arrow-down"></i>
-                    </a>
-                    <button onclick="copyRefLink()" class="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-3xl font-medium transition-colors">
-                        Скопировать мою реф. ссылку
-                    </button>
-                </div>
-                
-                <div class="mt-12 flex items-center gap-8 text-sm">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check text-emerald-400"></i>
-                        <span>Моментальный выпуск</span>
+        
+        <!-- Правая часть с изображением -->
+        <div class="relative hidden md:block">
+            <div class="absolute -inset-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 blur-3xl rounded-[4rem]"></div>
+            
+            <img src="https://i.pinimg.com/736x/7d/8d/22/7d8d22d66d37dceba07f178704766c82.jpg" 
+                 alt="Банковские карты" 
+                 class="rounded-3xl shadow-2xl relative z-10 border border-white/20 w-full">
+            
+            <!-- Плавающий бонус -->
+            <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-emerald-500/30 rounded-3xl p-6 shadow-2xl backdrop-blur-xl">
+                <div class="flex items-center gap-4">
+                    <div class="text-5xl">🎉</div>
+                    <div>
+                        <p class="font-semibold text-emerald-400">Ваш бонус</p>
+                        <p class="text-4xl font-bold text-white tracking-tighter">5.000 ₽</p>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-check text-emerald-400"></i>
-                        <span>Кэшбэк до 30%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 3 WAYS -->
+<section id="ways" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-semibold heading-font mb-4">3 способа оформить карту</h2>
+            <p class="text-zinc-400 text-xl max-w-md mx-auto">Выберите банк и нужный продукт</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <!-- Тинькофф -->
+            <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group relative">
+                <!-- Бейдж -->
+                <div class="absolute -top-4 -right-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold px-5 py-2 rounded-3xl shadow-xl shadow-emerald-500/50 flex items-center gap-2 z-20">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Обновлена</span>
+                </div>
+                
+                <div class="h-20 w-20 mx-auto mb-6 bg-gradient-to-br from-orange-400 to-amber-500 rounded-3xl flex items-center justify-center text-5xl shadow-inner transition-transform group-hover:scale-110">
+                    🍊
+                </div>
+                
+                <h3 class="text-3xl font-semibold mb-2 heading-font text-center">Тинькофф</h3>
+                <p class="text-emerald-400 font-medium text-center mb-8">До 5000 ₽ за оформление</p>
+                
+                <ul class="space-y-4 mb-10 text-zinc-300">
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Кредитная карта с кэшбэком до 30%</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бесплатное обслуживание навсегда</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Моментальное решение онлайн</span></li>
+                </ul>
+                
+                <button onclick="openModal('tinkoffModal')" 
+                        class="block w-full bg-gradient-to-r from-orange-400 to-amber-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
+                    Оформить Тинькофф →
+                </button>
+            </div>
+
+            <!-- Альфа-Банк -->
+            <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group relative">
+                <!-- Бейдж -->
+                <div class="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-rose-500 text-white text-sm font-bold px-5 py-2 rounded-3xl shadow-xl shadow-red-500/50 flex items-center gap-2 z-20">
+                    <i class="fas fa-fire"></i>
+                    <span>ХИТ</span>
+                </div>
+                
+                <div class="h-20 w-20 mx-auto mb-6 bg-gradient-to-br from-red-500 to-rose-600 rounded-3xl flex items-center justify-center text-5xl shadow-inner transition-transform group-hover:scale-110">
+                    🔴
+                </div>
+                
+                <h3 class="text-3xl font-semibold mb-2 heading-font text-center">Альфа-Банк</h3>
+                <p class="text-emerald-400 font-medium text-center mb-8">До 4000 ₽ + приветственный кэшбэк</p>
+                
+                <ul class="space-y-4 mb-10 text-zinc-300">
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Альфа-Карта с кэшбэком 10% на всё</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>До 5000 ₽ в месяц кэшбэком</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бесплатная доставка курьером</span></li>
+                </ul>
+                
+                <button onclick="openModal('alfaModal')" 
+                        class="block w-full bg-gradient-to-r from-red-500 to-rose-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
+                    Оформить Альфу →
+                </button>
+            </div>
+
+<!-- Ozon -->
+<div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group relative">
+    
+    <!-- ПЛАШКА "Выгоднее" — синяя -->
+    <div class="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-sm font-bold px-5 py-2 rounded-3xl shadow-xl shadow-blue-500/50 flex items-center gap-2 z-20">
+        <i class="fas fa-gem"></i>
+        <span>Выгоднее</span>
+    </div>
+    
+    <div class="h-20 w-20 mx-auto mb-6 bg-gradient-to-br from-violet-500 to-purple-600 rounded-3xl flex items-center justify-center text-5xl shadow-inner transition-transform group-hover:scale-110">
+        🛍️
+    </div>
+    
+    <h3 class="text-3xl font-semibold mb-2 heading-font text-center">Ozon Банк</h3>
+    <p class="text-emerald-400 font-medium text-center mb-8">До 3000 ₽ + баллы OZON</p>
+    
+    <ul class="space-y-4 mb-10 text-zinc-300">
+        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Карта с кэшбэком в Ozon</span></li>
+        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Выгодные рассрочки</span></li>
+        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бонусы на маркетплейсе</span></li>
+    </ul>
+    
+    <button onclick="openModal('ozonModal')" 
+            class="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
+        Оформить Ozon →
+    </button>
+</div>
+
+        </div>
+    </div>
+</section>
+    </section>
+
+<!-- BENEFITS -->
+<section id="benefits" class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-semibold heading-font mb-4">Почему через меня выгоднее?</h2>
+            <p class="text-zinc-400 text-xl max-w-lg mx-auto">Максимальные бонусы, личная поддержка и проверенные предложения</p>
+        </div>
+        
+        <div class="grid md:grid-cols-12 gap-10 items-center">
+            
+            <!-- Левая часть - Преимущества -->
+            <div class="md:col-span-5 space-y-10">
+                <div class="flex gap-6 group">
+                    <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-blue-500/50 transition-all group-hover:scale-110 group-hover:shadow-blue-500/70">💰</div>
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-2">Максимальные бонусы</h4>
+                        <p class="text-zinc-400">Знаю все актуальные акции банков и помогаю получить самый высокий бонус — до 5000 ₽.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-6 group">
+                    <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-emerald-500/50 transition-all group-hover:scale-110 group-hover:shadow-emerald-500/70">🛡️</div>
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-2">Личная поддержка</h4>
+                        <p class="text-zinc-400">Помогаю на всех этапах: от выбора карты до получения бонуса. Отвечаю быстро.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-6 group">
+                    <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-violet-500/50 transition-all group-hover:scale-110 group-hover:shadow-violet-500/70">⚡</div>
+                    <div>
+                        <h4 class="text-2xl font-semibold mb-2">Быстро и безопасно</h4>
+                        <p class="text-zinc-400">Только официальные реферальные ссылки. Никаких рисков и скрытых условий.</p>
                     </div>
                 </div>
             </div>
             
-            <div class="relative hidden md:block">
-                <div class="absolute -inset-10 bg-blue-500/10 blur-3xl rounded-[4rem]"></div>
-                <img src="https://i.pinimg.com/736x/7d/8d/22/7d8d22d66d37dceba07f178704766c82.jpg" alt="Банковские карты" class="rounded-3xl shadow-2xl relative z-10 border border-white/20">
-                <div class="absolute -bottom-6 -right-6 bg-zinc-900 border border-white/20 rounded-3xl p-6 shadow-xl">
-                    <div class="flex items-center gap-4">
-                        <div class="text-4xl">🎉</div>
-                        <div>
-                            <p class="font-semibold">Ваш бонус</p>
-                            <p class="text-emerald-400 text-2xl font-semibold">до 5000 ₽</p>
+            <!-- Правая часть - Бонусы + Отзыв -->
+            <div class="md:col-span-7">
+                <div class="bg-zinc-900/70 border border-white/10 rounded-3xl p-10 backdrop-blur-xl hover:border-white/20 transition-all duration-300 shadow-2xl shadow-blue-500/10 hover:shadow-blue-500/20">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                        
+                        <!-- Бонусы -->
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-4">
+                                <div class="text-4xl">🍊</div>
+                                <div>
+                                    <p class="text-emerald-400 font-medium text-sm">ТИНЬКОФФ</p>
+                                    <p class="text-4xl font-semibold leading-none">5000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="text-4xl">🔴</div>
+                                <div>
+                                    <p class="text-emerald-400 font-medium text-sm">АЛЬФА</p>
+                                    <p class="text-4xl font-semibold leading-none">4000 ₽</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="text-4xl">🛍️</div>
+                                <div>
+                                    <p class="text-emerald-400 font-medium text-sm">OZON</p>
+                                    <p class="text-4xl font-semibold leading-none">3000 ₽</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Отзыв -->
+                        <div class="bg-zinc-800/80 rounded-3xl p-8 flex flex-col justify-center relative overflow-hidden">
+                            <!-- Лёгкое свечение фона -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-transparent"></div>
+                            
+                            <!-- Звёзды -->
+                            <div class="flex gap-1 mb-6 text-4xl relative z-10">
+                                <span class="text-yellow-400 drop-shadow-[0_0_8px_rgb(250,204,21)] transition-transform hover:scale-125">★</span>
+                                <span class="text-yellow-400 drop-shadow-[0_0_8px_rgb(250,204,21)] transition-transform hover:scale-125">★</span>
+                                <span class="text-yellow-400 drop-shadow-[0_0_8px_rgb(250,204,21)] transition-transform hover:scale-125">★</span>
+                                <span class="text-yellow-400 drop-shadow-[0_0_8px_rgb(250,204,21)] transition-transform hover:scale-125">★</span>
+                                <span class="text-yellow-400 drop-shadow-[0_0_8px_rgb(250,204,21)] transition-transform hover:scale-125">★</span>
+                            </div>
+                            
+                            <p class="text-xl leading-relaxed relative z-10">"Оформил карту Тинькофф за 10 минут. Бонус пришёл уже на следующий день. Очень рекомендую!"</p>
+                            <p class="text-sm text-zinc-500 mt-6 relative z-10">— Алексей, Москва</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 3 WAYS -->
-    <section id="ways" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-semibold heading-font mb-4">3 способа оформить карту</h2>
-                <p class="text-zinc-400 text-xl max-w-md mx-auto">Выберите банк и нужный продукт</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Tinkoff -->
-                <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group">
-                    <div class="h-14 w-14 bg-orange-500 rounded-2xl flex items-center justify-center text-4xl mb-8">🍊</div>
-                    <h3 class="text-3xl font-semibold mb-2 heading-font">Тинькофф</h3>
-                    <p class="text-emerald-400 font-medium mb-6">До 5000 ₽ за оформление</p>
-                    <ul class="space-y-4 mb-10 text-zinc-300">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Кредитная карта с кэшбэком до 30%</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бесплатное обслуживание навсегда</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Моментальное решение онлайн</span></li>
-                    </ul>
-                    <button onclick="openModal('tinkoffModal')" class="block w-full bg-gradient-to-r from-orange-400 to-amber-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
-                        Оформить Тинькофф →
-                    </button>
-                </div>
-
-                <!-- Alfa -->
-                <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group relative">
-                    <div class="absolute -top-3 -right-3 bg-red-500 text-xs font-bold px-4 py-1 rounded-3xl">ХИТ</div>
-                    <div class="h-14 w-14 bg-red-600 rounded-2xl flex items-center justify-center text-4xl mb-8">🔴</div>
-                    <h3 class="text-3xl font-semibold mb-2 heading-font">Альфа-Банк</h3>
-                    <p class="text-emerald-400 font-medium mb-6">До 4000 ₽ + приветственный кэшбэк</p>
-                    <ul class="space-y-4 mb-10 text-zinc-300">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Альфа-Карта с кэшбэком 10% на всё</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>До 5000 ₽ в месяц кэшбэком</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бесплатная доставка курьером</span></li>
-                    </ul>
-                    <button onclick="openModal('alfaModal')" class="block w-full bg-gradient-to-r from-red-500 to-rose-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
-                        Оформить Альфу →
-                    </button>
-                </div>
-
-                <!-- Ozon -->
-                <div class="bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover group">
-                    <div class="h-14 w-14 bg-violet-600 rounded-2xl flex items-center justify-center text-4xl mb-8">🛍️</div>
-                    <h3 class="text-3xl font-semibold mb-2 heading-font">Ozon Банк</h3>
-                    <p class="text-emerald-400 font-medium mb-6">До 3000 ₽ + баллы OZON</p>
-                    <ul class="space-y-4 mb-10 text-zinc-300">
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Карта с кэшбэком в Ozon</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Выгодные рассрочки</span></li>
-                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i><span>Бонусы на маркетплейсе</span></li>
-                    </ul>
-                    <button onclick="openModal('ozonModal')" class="block w-full bg-gradient-to-r from-violet-500 to-purple-500 text-center py-5 rounded-3xl font-semibold text-lg hover:brightness-110 transition-all group-hover:scale-105">
-                        Оформить Ozon →
-                    </button>
-                </div>
-            </div>
+<!-- REVIEWS -->
+<section id="reviews" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-semibold heading-font mb-4">Что говорят клиенты</h2>
+            <p class="text-zinc-400 text-xl">Реальные отзывы людей, которые получили бонусы</p>
         </div>
-    </section>
+        
+        <div id="reviewsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        
+        <div class="text-center mt-12">
+            <button onclick="showReviewModal()" 
+                    class="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 px-8 py-4 rounded-3xl font-medium transition-all hover:scale-105 shadow-lg shadow-emerald-500/30">
+                <i class="fas fa-star"></i>
+                <span>Написать свой отзыв</span>
+            </button>
+        </div>
+    </div>
+</section>
 
-    <!-- BENEFITS -->
-    <section id="benefits" class="py-24 bg-black">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-5">
-                    <h2 class="text-5xl font-semibold heading-font leading-tight">Почему через мою реферальную программу выгоднее?</h2>
-                    <div class="mt-8 space-y-8">
-                        <div class="flex gap-6">
-                            <div class="text-5xl text-blue-400">01</div>
-                            <div>
-                                <h4 class="text-xl font-semibold mb-2">Максимальные бонусы</h4>
-                                <p class="text-zinc-400">Я знаю все актуальные акции и помогаю получить самый высокий бонус.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6">
-                            <div class="text-5xl text-blue-400">02</div>
-                            <div>
-                                <h4 class="text-xl font-semibold mb-2">Личная поддержка</h4>
-                                <p class="text-zinc-400">Помогу с оформлением и отвечу на все вопросы.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-6">
-                            <div class="text-5xl text-blue-400">03</div>
-                            <div>
-                                <h4 class="text-xl font-semibold mb-2">Быстро и безопасно</h4>
-                                <p class="text-zinc-400">Официальные ссылки банков. Никаких рисков.</p>
-                            </div>
-                        </div>
+<!-- FAQ -->
+<section id="faq" class="py-24 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-semibold heading-font mb-4">Часто задаваемые вопросы</h2>
+            <p class="text-zinc-400 text-xl">Всё, что вас может интересовать</p>
+        </div>
+        
+        <div class="space-y-5">
+            
+            <!-- Вопрос 1 -->
+            <details class="group bg-zinc-800/80 border border-white/10 hover:border-blue-500/40 rounded-3xl transition-all duration-300 open:shadow-xl open:shadow-blue-500/10 open:border-blue-500/30">
+                <summary class="flex justify-between items-center cursor-pointer px-8 py-7 text-xl font-medium">
+                    <span>Сколько времени занимает оформление?</span>
+                    <i class="fas fa-chevron-down text-2xl text-blue-400 transition-all duration-300 group-open:rotate-180"></i>
+                </summary>
+                <div class="px-8 pb-8 pt-2">
+                    <div class="bg-zinc-900/50 border-l-4 border-emerald-400 pl-6 py-5 rounded-r-2xl text-zinc-200 leading-relaxed">
+                        От 5 до 15 минут онлайн. Курьер привозит карту в течение 1–3 дней.
                     </div>
                 </div>
-                <div class="md:col-span-7">
-                    <div class="bg-zinc-900 rounded-3xl p-10">
-                        <div class="grid grid-cols-2 gap-8">
-                            <div class="space-y-8">
-                                <div><div class="text-emerald-400 text-sm font-medium">ТИНЬКОФФ</div><div class="text-5xl font-semibold mt-1">5000 ₽</div></div>
-                                <div><div class="text-emerald-400 text-sm font-medium">АЛЬФА</div><div class="text-5xl font-semibold mt-1">4000 ₽</div></div>
-                            </div>
-                            <div class="bg-zinc-800 rounded-3xl p-8 flex flex-col justify-center">
-                                <p class="text-2xl font-medium leading-tight">«Оформил карту Тинькофф за 7 минут. Бонус пришёл на следующий день!»</p>
-                                <p class="text-zinc-400 mt-6">— Алексей, Москва</p>
-                            </div>
-                        </div>
+            </details>
+
+            <!-- Вопрос 2 -->
+            <details class="group bg-zinc-800/80 border border-white/10 hover:border-blue-500/40 rounded-3xl transition-all duration-300 open:shadow-xl open:shadow-blue-500/10 open:border-blue-500/30">
+                <summary class="flex justify-between items-center cursor-pointer px-8 py-7 text-xl font-medium">
+                    <span>Нужно ли платить за выпуск карты?</span>
+                    <i class="fas fa-chevron-down text-2xl text-blue-400 transition-all duration-300 group-open:rotate-180"></i>
+                </summary>
+                <div class="px-8 pb-8 pt-2">
+                    <div class="bg-zinc-900/50 border-l-4 border-emerald-400 pl-6 py-5 rounded-r-2xl text-zinc-200 leading-relaxed">
+                        Нет. Все карты бесплатны в выпуске и обслуживании по акциям.
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </details>
 
-    <!-- REVIEWS -->
-    <section id="reviews" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-semibold heading-font mb-4">Отзывы клиентов</h2>
-                <p class="text-zinc-400 text-xl">Реальные отзывы людей, которые оформили карты</p>
-            </div>
-            <div id="reviewsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="py-24 bg-zinc-900">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-4xl font-semibold text-center mb-12">Часто задаваемые вопросы</h2>
-            <div class="space-y-6">
-                <details class="group bg-zinc-800/70 rounded-3xl p-8">
-                    <summary class="flex justify-between items-center cursor-pointer text-xl font-medium">
-                        <span>Сколько времени занимает оформление?</span>
-                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <p class="mt-6 text-zinc-400">От 5 до 15 минут онлайн. Курьер привозит карту в течение 1–3 дней.</p>
-                </details>
-                <details class="group bg-zinc-800/70 rounded-3xl p-8">
-                    <summary class="flex justify-between items-center cursor-pointer text-xl font-medium">
-                        <span>Нужно ли платить за выпуск карты?</span>
-                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <p class="mt-6 text-zinc-400">Нет. Все карты бесплатны в выпуске и обслуживании по акциям.</p>
-                </details>
-                <details class="group bg-zinc-800/70 rounded-3xl p-8">
-                    <summary class="flex justify-between items-center cursor-pointer text-xl font-medium">
-                        <span>Можно ли оформить несколько карт?</span>
-                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform"></i>
-                    </summary>
-                    <p class="mt-6 text-zinc-400">Да, можно оформить все три. Бонусы суммируются.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- ОБРАТНАЯ СВЯЗЬ -->
-    <section id="feedback" class="py-24 bg-black border-t border-white/10">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-zinc-900 rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-10">
-                <div class="flex-shrink-0">
-                    <img src="https://sun1-18.userapi.com/s/v1/ig2/geloJHmOUDps-gpcYd0aMBH_ZIaGAYcKY1PlD49u1khupoItP-FYP_Hl3r7HXgXuclndOR_uSHU8huUqgTbKoNOR.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&cs=1254x0" alt="Владислав" class="w-48 h-48 md:w-64 md:h-64 object-cover rounded-3xl border-4 border-blue-500/30 shadow-2xl">
+            <!-- Вопрос 3 -->
+            <details class="group bg-zinc-800/80 border border-white/10 hover:border-blue-500/40 rounded-3xl transition-all duration-300 open:shadow-xl open:shadow-blue-500/10 open:border-blue-500/30">
+                <summary class="flex justify-between items-center cursor-pointer px-8 py-7 text-xl font-medium">
+                    <span>Можно ли оформить несколько карт?</span>
+                    <i class="fas fa-chevron-down text-2xl text-blue-400 transition-all duration-300 group-open:rotate-180"></i>
+                </summary>
+                <div class="px-8 pb-8 pt-2">
+                    <div class="bg-zinc-900/50 border-l-4 border-emerald-400 pl-6 py-5 rounded-r-2xl text-zinc-200 leading-relaxed">
+                        Да, можно оформить все три карты. Бонусы суммируются.
+                    </div>
                 </div>
-                <div class="flex-1 text-center md:text-left">
-                    <h2 class="text-4xl font-semibold heading-font mb-4">Обратная связь</h2>
-                    <p class="text-xl text-zinc-400 mb-8">Есть вопросы по оформлению карт или бонусам? Пишите мне — отвечу максимально быстро.</p>
-                    <a href="https://vk.com/vladislav_manager_tao" target="_blank" class="inline-flex items-center gap-4 bg-zinc-800 hover:bg-zinc-700 transition-colors px-8 py-5 rounded-3xl text-lg font-medium group">
-                        <i class="fab fa-vk text-3xl text-blue-400"></i>
-                        <div>
-                            <div class="font-semibold">Написать в VK</div>
-                            <div class="text-sm text-zinc-500">Владислав • Карты Выгодно</div>
-                        </div>
-                    </a>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+<!-- ОБРАТНАЯ СВЯЗЬ -->
+<section id="feedback" class="py-24 bg-black border-t border-white/10">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="bg-gradient-to-br from-zinc-900 to-zinc-950 border border-white/10 rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-10 hover:border-blue-500/30 transition-all duration-500 shadow-2xl shadow-blue-500/10">
+            
+            <!-- Фото -->
+            <div class="flex-shrink-0 relative">
+                <div class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-3xl"></div>
+                <img src="https://sun1-18.userapi.com/s/v1/ig2/geloJHmOUDps-gpcYd0aMBH_ZIaGAYcKY1PlD49u1khupoItP-FYP_Hl3r7HXgXuclndOR_uSHU8huUqgTbKoNOR.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1080x1080,1254x1254&from=bu&cs=1254x0" 
+                     alt="Владислав" 
+                     class="w-56 h-56 md:w-64 md:h-64 object-cover rounded-3xl border-4 border-blue-500/50 shadow-2xl relative z-10 transition-transform hover:scale-105">
+            </div>
+            
+            <!-- Текст -->
+            <div class="flex-1 text-center md:text-left">
+                <h2 class="text-4xl font-semibold heading-font mb-4">Есть вопросы?</h2>
+                <p class="text-xl text-zinc-400 mb-10">Пишите мне в VK — отвечу максимально быстро и помогу с оформлением карт</p>
+                
+                <a href="https://vk.com/vladislav_manager_tao" 
+                   target="_blank"
+                   class="inline-flex items-center gap-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-10 py-5 rounded-3xl text-lg font-semibold transition-all hover:scale-105 shadow-lg shadow-blue-500/40 group">
+                    <i class="fab fa-vk text-4xl group-hover:rotate-12 transition-transform"></i>
+                    <div>
+                        <div>Написать в VK</div>
+                        <div class="text-sm opacity-75">Владислав • Карты Выгодно</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-24 bg-gradient-to-b from-zinc-900 to-black relative overflow-hidden">
+    <div class="absolute inset-0 bg-blue-500/5"></div>
+    
+    <div class="max-w-2xl mx-auto text-center px-6 relative z-10">
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl mb-8">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <span class="text-sm font-medium">Ограниченное предложение</span>
+        </div>
+        
+        <h2 class="text-5xl md:text-6xl font-semibold heading-font leading-tight mb-6">
+            Готовы получить<br>свой бонус?
+        </h2>
+        
+        <p class="text-xl text-zinc-400 mb-10 max-w-md mx-auto">
+            Выберите карту и оформите её по моей реферальной ссылке — бонус придёт быстро
+        </p>
+        
+        <a href="#ways" 
+           class="inline-flex items-center gap-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 hover:brightness-110 px-12 py-6 rounded-3xl text-2xl font-semibold transition-all hover:scale-105 shadow-xl shadow-blue-500/30">
+            Выбрать карту
+            <i class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <p>Этот сайт создан для удобства. Все предложения — официальные акции банков.</p>
+                <p class="mt-1 text-zinc-500">© 2026 Карты Выгодно • Не является финансовой рекомендацией</p>
+            </div>
+            
+            <a href="https://vk.com/card_reff" 
+               target="_blank"
+               class="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors">
+                <i class="fab fa-vk text-3xl"></i>
+                <div>
+                    <div class="font-medium">Наше сообщество VK</div>
+                    <div class="text-sm text-zinc-500">Пишите вопросы сюда</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="py-24 bg-gradient-to-b from-zinc-900 to-black">
-        <div class="max-w-2xl mx-auto text-center px-6">
-            <h2 class="text-5xl font-semibold heading-font mb-6">Готовы получить бонус?</h2>
-            <p class="text-xl text-zinc-400 mb-10">Выберите карту выше и оформите её по моей реферальной ссылке</p>
-            <a href="#ways" class="bg-blue-600 hover:bg-blue-500 transition-colors px-10 py-6 rounded-3xl text-xl font-semibold">Перейти к выбору карт</a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-black py-12 border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6 text-center text-zinc-500 text-sm">
-            <p>Этот сайт создан для удобства. Все предложения — официальные акции банков.</p>
-            <p class="mt-2">© 2026 Карты Выгодно • Не является финансовой рекомендацией</p>
-        </div>
-    </footer>
-
-    <!-- ==================== МОДАЛЫ ==================== -->
-    <!-- Tinkoff Modal -->
-    <div id="tinkoffModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
-        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
-            <h3 class="text-2xl font-semibold mb-6 text-center">Какой продукт Тинькофф?</h3>
-            <div class="space-y-3">
-                <a href="https://tbank.ru/baf/ATSApBPtQQf" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Дебетовая карта</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://tbank.ru/baf/9lm0GVe29S9" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Дебетовая исламская карта</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://tbank.ru/baf/9bcPP8CMYDS" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Кредитная карта</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://tbank.ru/baf/9yNpiOaWm3I" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Счёт для бизнеса</span><i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <button onclick="closeModal('tinkoffModal')" class="mt-6 w-full py-3 text-zinc-400 hover:text-white transition-colors">Закрыть</button>
+            </a>
         </div>
     </div>
+</footer>
 
-    <!-- Alfa Modal -->
-    <div id="alfaModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
-        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
-            <h3 class="text-2xl font-semibold mb-6 text-center">Какой продукт Альфа-Банка?</h3>
-            <div class="space-y-3">
-                <a href="https://alfa.me/jtyAt_" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Альфа-Карта с кэшбэком</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://alfa.me/VKCZRS" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Детская карта с кэшбэком</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://alfa.me/QsJckI" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Кредитная карта</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://alfa.me/9Uwv9t" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Открытие счёта</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://alfa.me/tADfgn" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Регистрация бизнеса</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://alfa.me/N-ydiM" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Пенсия с Альфа-Картой</span><i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <button onclick="closeModal('alfaModal')" class="mt-6 w-full py-3 text-zinc-400 hover:text-white transition-colors">Закрыть</button>
-        </div>
-    </div>
+<!-- ==================== МОДАЛЫ ==================== -->
 
-    <!-- Ozon Modal -->
-    <div id="ozonModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
-        <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4">
-            <h3 class="text-2xl font-semibold mb-6 text-center">Какой продукт Ozon оформить?</h3>
-            <div class="space-y-3">
-                <a href="https://ozon.ru/fintech/promo/ref/S0A2RLALT" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Карта Ozon Банка</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://ozon.ru/fintech/promo/ref/GEHJ-6_QU" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Кредитная карта</span><i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="https://ozon.ru/fintech/promo/ref/QKC_UXPWW" target="_blank" class="block w-full bg-zinc-800 hover:bg-zinc-700 px-6 py-4 rounded-2xl transition-colors flex justify-between items-center">
-                    <span>Регистрация бизнеса</span><i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            <button onclick="closeModal('ozonModal')" class="mt-6 w-full py-3 text-zinc-400 hover:text-white transition-colors">Закрыть</button>
+<!-- Tinkoff Modal -->
+<div id="tinkoffModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[100]">
+    <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4 border border-white/10 shadow-2xl">
+        <h3 class="text-2xl font-semibold mb-8 text-center heading-font">Какой продукт Тинькофф выбрать?</h3>
+        
+        <div class="space-y-3">
+            <a href="https://tbank.ru/baf/ATSApBPtQQf" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">💳</span>
+                    <span class="font-medium">Дебетовая карта</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
+            <a href="https://tbank.ru/baf/9lm0GVe29S9" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">💷</span>
+                    <span class="font-medium">Дебетовая исламская карта</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
+            <a href="https://tbank.ru/baf/9bcPP8CMYDS" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">🪪</span>
+                    <span class="font-medium">Кредитная карта</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
+            <a href="https://tbank.ru/baf/9yNpiOaWm3I" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">📝</span>
+                    <span class="font-medium">Счёт для бизнеса</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
+            <a href="https://tbank.ru/baf/2Kx8FoapSik" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">📇</span>
+                    <span class="font-medium">Регистрация бизнеса</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
+            <a href="https://tbank.ru/baf/4uS8bTj4y5G" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">👧</span>
+                    <span class="font-medium">Пенсия на карту Т-Банка</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
+            <a href="https://tbank.ru/baf/8avpdNosBpA" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-amber-500/10 border border-transparent hover:border-orange-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">👨‍🔧</span>
+                    <span class="font-medium">Работа в Т-Банке</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-orange-400 transition-colors"></i>
+            </a>
         </div>
+        
+        <button onclick="closeModal('tinkoffModal')" class="mt-8 w-full py-4 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-2xl transition-all">Закрыть</button>
     </div>
+</div>
+
+<!-- Alfa Modal -->
+<div id="alfaModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[100]">
+    <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4 border border-white/10 shadow-2xl">
+        <h3 class="text-2xl font-semibold mb-8 text-center heading-font">Какой продукт Альфа-Банка?</h3>
+        
+        <div class="space-y-3">
+            <a href="https://alfa.me/jtyAt_" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-red-500/10 hover:to-rose-500/10 border border-transparent hover:border-red-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">💳</span>
+                    <span class="font-medium">Альфа-Карта с кэшбэком</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-red-400 transition-colors"></i>
+            </a>
+            <a href="https://alfa.me/VKCZRS" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-red-500/10 hover:to-rose-500/10 border border-transparent hover:border-red-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">💷</span>
+                    <span class="font-medium">Детская карта с кэшбэком</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-red-400 transition-colors"></i>
+            </a>
+            <a href="https://alfa.me/QsJckI" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-red-500/10 hover:to-rose-500/10 border border-transparent hover:border-red-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">🪪</span>
+                    <span class="font-medium">Кредитная карта</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-red-400 transition-colors"></i>
+            </a>
+            <a href="https://alfa.me/9Uwv9t" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-red-500/10 hover:to-rose-500/10 border border-transparent hover:border-red-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">📝</span>
+                    <span class="font-medium">Открытие счёта</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-red-400 transition-colors"></i>
+            </a>
+            <a href="https://alfa.me/tADfgn" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-red-500/10 hover:to-rose-500/10 border border-transparent hover:border-red-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">📇</span>
+                    <span class="font-medium">Регистрация бизнеса</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-red-400 transition-colors"></i>
+            </a>
+            <a href="https://alfa.me/N-ydiM" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-red-500/10 hover:to-rose-500/10 border border-transparent hover:border-red-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">👧</span>
+                    <span class="font-medium">Пенсия с Альфа-Картой</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-red-400 transition-colors"></i>
+            </a>
+        </div>
+        
+        <button onclick="closeModal('alfaModal')" class="mt-8 w-full py-4 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-2xl transition-all">Закрыть</button>
+    </div>
+</div>
+
+<!-- Ozon Modal -->
+<div id="ozonModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-[100]">
+    <div class="modal bg-zinc-900 rounded-3xl p-8 max-w-md w-full mx-4 border border-white/10 shadow-2xl">
+        <h3 class="text-2xl font-semibold mb-8 text-center heading-font">Какой продукт Ozon оформить?</h3>
+        
+        <div class="space-y-3">
+            <a href="https://ozon.ru/fintech/promo/ref/S0A2RLALT" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 border border-transparent hover:border-violet-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">💳</span>
+                    <span class="font-medium">Карта Ozon Банка</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-violet-400 transition-colors"></i>
+            </a>
+            <a href="https://ozon.ru/fintech/promo/ref/GEHJ-6_QU" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 border border-transparent hover:border-violet-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">🪪</span>
+                    <span class="font-medium">Кредитная карта</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-violet-400 transition-colors"></i>
+            </a>
+            <a href="https://ozon.ru/fintech/promo/ref/QKC_UXPWW" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 border border-transparent hover:border-violet-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">📇</span>
+                    <span class="font-medium">Регистрация бизнеса</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-violet-400 transition-colors"></i>
+            </a>
+            <a href="https://ozon.ru/fintech/apps/mgm/KFY9RXNOU" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 border border-transparent hover:border-violet-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">📝</span>
+                    <span class="font-medium">Счёт для ИП или ООО</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-violet-400 transition-colors"></i>
+            </a>
+            <a href="https://ozon.ru/fintech/promo/ref/IJHARFCDC" target="_blank" class="group flex items-center justify-between bg-zinc-800 hover:bg-gradient-to-r hover:from-violet-500/10 hover:to-purple-500/10 border border-transparent hover:border-violet-500/30 px-6 py-5 rounded-2xl transition-all duration-300">
+                <div class="flex items-center gap-4">
+                    <span class="text-2xl">👧</span>
+                    <span class="font-medium">Пенсия на Ozon Банк</span>
+                </div>
+                <i class="fas fa-arrow-right text-zinc-400 group-hover:text-violet-400 transition-colors"></i>
+            </a>
+        </div>
+        
+        <button onclick="closeModal('ozonModal')" class="mt-8 w-full py-4 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-2xl transition-all">Закрыть</button>
+    </div>
+</div>
 
     <!-- Auth Modal -->
     <div id="authModal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[200]">
@@ -394,24 +751,31 @@
         let isLoginMode = false;
         let currentRating = 5;
 
-        // === Авторизация ===
         function showAuthModal() {
             document.getElementById('authModal').classList.remove('hidden');
             document.getElementById('authModal').classList.add('flex');
         }
+
         function closeAuthModal() {
             document.getElementById('authModal').classList.add('hidden');
             document.getElementById('authModal').classList.remove('flex');
         }
+
         function toggleAuthMode() {
             isLoginMode = !isLoginMode;
             document.getElementById('modalTitle').textContent = isLoginMode ? 'Вход' : 'Регистрация';
             document.getElementById('authBtn').textContent = isLoginMode ? 'Войти' : 'Зарегистрироваться';
         }
+
         async function handleAuth() {
             const phone = document.getElementById('phone').value.trim();
             const password = document.getElementById('password').value;
             const name = document.getElementById('name').value;
+
+            if (!phone || !password) {
+                alert("Заполните телефон и пароль");
+                return;
+            }
 
             const url = isLoginMode ? '/api/login' : '/api/register';
             const body = isLoginMode ? { phone, password } : { phone, password, name };
@@ -423,23 +787,24 @@
                     body: JSON.stringify(body)
                 });
                 const data = await res.json();
+
                 if (data.success) {
-                    if (isLoginMode) {
-                        localStorage.setItem('token', data.token);
-                        alert('✅ Успешный вход!');
-                        closeAuthModal();
-                    } else {
-                        alert('✅ Регистрация прошла успешно! Теперь войдите.');
-                        toggleAuthMode();
-                    }
-                } else alert(data.error || 'Ошибка');
-            } catch (e) { alert('Ошибка соединения'); }
+                    localStorage.setItem('token', data.token);
+                    alert(isLoginMode ? '✅ Успешный вход!' : '✅ Регистрация и вход выполнены успешно!');
+                    closeAuthModal();
+                    updateHeaderButtons();
+                } else {
+                    alert(data.error || 'Ошибка');
+                }
+            } catch (e) {
+                alert('Ошибка соединения с сервером');
+            }
         }
 
         // === Отзывы ===
         function showReviewModal() {
             if (!localStorage.getItem('token')) {
-                alert("Войдите, чтобы оставить отзыв");
+                alert("Войдите или зарегистрируйтесь, чтобы оставить отзыв");
                 showAuthModal();
                 return;
             }
@@ -447,10 +812,12 @@
             document.getElementById('reviewModal').classList.add('flex');
             renderStars();
         }
+
         function closeReviewModal() {
             document.getElementById('reviewModal').classList.add('hidden');
             document.getElementById('reviewModal').classList.remove('flex');
         }
+
         function renderStars() {
             const container = document.getElementById('stars');
             container.innerHTML = '';
@@ -462,9 +829,11 @@
                 container.appendChild(star);
             }
         }
+
         async function submitReview() {
             const text = document.getElementById('reviewText').value.trim();
             if (!text) return alert("Напишите текст отзыва");
+
             const res = await fetch('/api/reviews', {
                 method: 'POST',
                 headers: {
@@ -475,10 +844,10 @@
             });
             const data = await res.json();
             if (data.success) {
-                alert("Отзыв опубликован!");
+                alert("✅ Отзыв опубликован!");
                 closeReviewModal();
                 loadReviews();
-            } else alert(data.error);
+            } else alert(data.error || "Ошибка");
         }
 
         async function loadReviews() {
@@ -493,26 +862,23 @@
                         <div class="col-span-3 text-center py-20">
                             <p class="text-7xl mb-4">📭</p>
                             <p class="text-2xl text-zinc-400">Пока что нет отзывов</p>
-                            <p class="text-zinc-500 mt-3">Будь первым! Нажми кнопку "Написать отзыв"</p>
-                        </div>
-                    `;
+                        </div>`;
                     return;
                 }
 
-                reviews.forEach(r => {
-                    const div = document.createElement('div');
-                    div.className = "bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover";
-                    div.innerHTML = `
-                        <div class="flex mb-3 text-yellow-400">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
-                        <p class="text-zinc-300 mb-4">"${r.text}"</p>
-                        <p class="text-sm text-zinc-500">- ${r.name || r.user_name}</p>
-                    `;
-                    container.appendChild(div);
-                });
+ reviews.forEach(r => {
+    const div = document.createElement('div');
+    div.className = "bg-zinc-800/50 border border-white/10 rounded-3xl p-8 card-hover";
+    div.innerHTML = `
+        <div class="flex mb-3 text-yellow-400">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+        <p class="text-zinc-300 mb-4">"${r.text}"</p>
+        <p class="text-sm text-zinc-500">- ${r.name || r.user_name || 'Пользователь'}</p>
+    `;
+    container.appendChild(div);
+});
             } catch (e) {}
         }
 
-        // Старые функции
         function openModal(modalId) {
             document.getElementById(modalId).classList.remove('hidden');
             document.getElementById(modalId).classList.add('flex');
@@ -529,7 +895,44 @@
             navigator.clipboard.writeText(dummyLink).then(() => alert("Ссылка скопирована!"));
         }
 
-        window.onload = loadReviews;
+        function updateHeaderButtons() {
+            const container = document.getElementById('headerButtons');
+            const token = localStorage.getItem('token');
+
+            if (!token) {
+                container.innerHTML = `
+                    <button onclick="showAuthModal()" class="px-6 py-2.5 rounded-2xl border border-white/30 hover:bg-white/10 transition-all text-sm font-medium">
+                        Войти / Регистрация
+                    </button>
+                    <button onclick="showReviewModal()" class="bg-emerald-600 hover:bg-emerald-500 px-6 py-2.5 rounded-2xl font-semibold flex items-center gap-2">
+                        <i class="fas fa-star"></i> Написать отзыв
+                    </button>
+                `;
+                return;
+            }
+
+            fetch('/api/me', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            })
+            .then(r => r.json())
+            .then(() => {
+                container.innerHTML = `
+                    <button onclick="showReviewModal()" class="bg-emerald-600 hover:bg-emerald-500 px-6 py-2.5 rounded-2xl font-semibold flex items-center gap-2">
+                        <i class="fas fa-star"></i> Написать отзыв
+                    </button>
+                `;
+            })
+            .catch(() => {
+                localStorage.removeItem('token');
+                updateHeaderButtons();
+            });
+        }
+
+        // Инициализация
+        window.onload = () => {
+            loadReviews();
+            updateHeaderButtons();
+        };
     </script>
 </body>
 </html>
